@@ -1,0 +1,35 @@
+POST http://localhost:8081/create
+Content-Type: application/json
+
+{  
+  "eventName": "boardCreate",
+  "num": 2,
+  "title": "test insert-1",
+  "contents": "test insert-1",
+  "writeId": "user1",
+  "writeName": "사용자1",
+  "writeDate": "2021-09-11T16:20:41"
+}
+
+###
+POST http://localhost:8081/update
+Content-Type: application/json
+
+{  
+  "eventName": "boardUpdate",
+  "num": 2,
+  "title": "test upate-1",
+  "contents": "test upate-1",
+  "writeId": "user1",
+  "writeName": "사용자1",
+  "writeDate": "2021-09-11T16:20:41"
+}
+
+###
+POST http://localhost:8081/delete
+Content-Type: application/json
+
+{  
+  "eventName": "boardDelete",
+  "num": 2
+}

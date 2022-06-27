@@ -1,0 +1,49 @@
+##############
+### local
+##############
+
+server:
+  port: 8081
+
+spring: 
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+          - my-cluster.kafka.ktcloud.211.254.212.105.nip.io:32100
+          - my-cluster.kafka.ktcloud.211.254.212.105.nip.io:32000
+          - my-cluster.kafka.ktcloud.211.254.212.105.nip.io:32001
+          - my-cluster.kafka.ktcloud.211.254.212.105.nip.io:32002
+          configuration:
+            security:
+              protocol: SASL_PLAINTEXT
+            sasl:
+              mechanism: SCRAM-SHA-512
+              jaas:
+                config: org.apache.kafka.common.security.scram.ScramLoginModule required username="my-user" password="pprOnk80CDfo";
+                
+#            ssl:
+#              truststore.location: classpath:/truststore.jks
+#              truststore.type: JKS
+#              truststore.password: new1234
+            
+            
+      bindings:
+        boardCreate-out-0:
+          destination: my-topic
+#        boardUpdate-out-0:
+#          destination: order-board-update
+#        boardDelete-out-0:
+#          destination: order-board-delete
+        
+
+
+
+
+        
+
+
+
+
+
