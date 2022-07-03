@@ -25,7 +25,7 @@ spring:
             
       bindings:
         boardCreate-out-0:
-          destination: edu-topic-01
+          destination: edu-topic-02
         
 
 
