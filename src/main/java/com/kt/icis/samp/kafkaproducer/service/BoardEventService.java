@@ -20,13 +20,10 @@ public class BoardEventService {
     private static String SUCCESS = "Y";
 
     public ResultMessage boardCreate(BoardCreateEvent event){
-        
-                
  
         boolean result = streamBridge.send("boardCreate-out-0", event);
         log.info("====[Producer]====== boardCreate send to kafka Topic  BoardCreateEvent: {} , result :{}", event , result);
         return getReturnResultMessage(result);
-
 
     }
     

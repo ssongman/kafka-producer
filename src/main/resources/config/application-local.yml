@@ -21,21 +21,11 @@ spring:
             sasl:
               mechanism: SCRAM-SHA-512
               jaas:
-                config: org.apache.kafka.common.security.scram.ScramLoginModule required username="my-user" password="pprOnk80CDfo";
-                
-#            ssl:
-#              truststore.location: classpath:/truststore.jks
-#              truststore.type: JKS
-#              truststore.password: new1234
-            
+                config: org.apache.kafka.common.security.scram.ScramLoginModule required username="my-user" password="KykkJNJTcTJB";
             
       bindings:
         boardCreate-out-0:
-          destination: my-topic
-#        boardUpdate-out-0:
-#          destination: order-board-update
-#        boardDelete-out-0:
-#          destination: order-board-delete
+          destination: edu-topic-01
         
 
 
